@@ -1,23 +1,43 @@
 import logo from './logo.svg';
 import './App.css';
+import {useState} from 'react';
+
+
 
 function App() {
+
+  // setcounter method controls the variable counter 
+
+  // it can be setLogin,setRegister etc. 
+
+   let [counter,AdityaCounter] =  useState(0) ; 
+
+
+
+  // let counter = 5;
+const addValue = () =>{
+  counter+=1;
+  AdityaCounter(counter);
+  console.log("clicked",counter);
+}
+const decreaseValue = () =>{
+  counter-=1;
+  AdityaCounter(counter);
+}
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+   
+    <h1  > chai aur react </h1>
+    <h2>counter value: {counter}</h2>
+    <button
+    onClick= {addValue}
+    >Add value</button>
+    <br />
+    <button 
+    onClick={decreaseValue}>decrease value</button>
+
+
     </div>
   );
 }

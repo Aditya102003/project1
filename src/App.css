@@ -1,5 +1,11 @@
 .App {
-  text-align: center;
+  
+/* text-align: center;
+max-width: fit-content;
+background-color: #282c34; */
+}
+.App-div{
+align-items: center;
 }
 
 .App-logo {
